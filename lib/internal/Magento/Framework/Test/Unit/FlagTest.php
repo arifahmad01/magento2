@@ -64,7 +64,7 @@ class FlagTest extends \PHPUnit\Framework\TestCase
     {
         $flagCode = 'synchronize';
         $flag = $this->createFlagInstance(['flag_code' => $flagCode]);
-        $flag->setData('block', 'blockNmae');
+        $flag->setData('block', 'blockName');
         $this->assertSame($flag, $flag->save());
         $this->assertEquals($flagCode, $flag->getFlagCode());
     }
@@ -76,7 +76,7 @@ class FlagTest extends \PHPUnit\Framework\TestCase
     public function testBeforeSaveException()
     {
         $flag = $this->createFlagInstance();
-        $flag->setData('block', 'blockNmae');
+        $flag->setData('block', 'blockName');
         $flag->beforeSave();
     }
 
